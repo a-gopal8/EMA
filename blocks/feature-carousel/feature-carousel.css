@@ -1,0 +1,124 @@
+.feature-carousel .feature-carousel-wrapper {
+  position: relative;
+}
+
+.feature-carousel .feature-carousel-slide {
+  display: none;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.feature-carousel .feature-carousel-slide.active {
+  display: block;
+}
+
+.feature-carousel .feature-carousel-image {
+  position: absolute;
+  inset: 0;
+}
+
+.feature-carousel .feature-carousel-image picture,
+.feature-carousel .feature-carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-carousel .feature-carousel-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 32px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgb(0 0 0 / 60%);
+}
+
+.feature-carousel .feature-carousel-content p {
+  color: #f9fafc;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 0 12px;
+}
+
+.feature-carousel .feature-carousel-content h2,
+.feature-carousel .feature-carousel-content h3 {
+  color: #f9fafc;
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.feature-carousel .feature-carousel-content p:last-child {
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+}
+
+.feature-carousel .feature-carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.feature-carousel .feature-carousel-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-carousel .feature-carousel-btn:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.feature-carousel .feature-carousel-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.feature-carousel .feature-carousel-dot {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.feature-carousel .feature-carousel-dot.active {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+@media (width >= 900px) {
+  .feature-carousel .feature-carousel-slide {
+    min-height: 500px;
+  }
+
+  .feature-carousel .feature-carousel-content {
+    min-height: 500px;
+    padding: 60px 48px;
+  }
+}

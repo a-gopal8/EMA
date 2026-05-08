@@ -1,6 +1,4 @@
 /* stylelint-disable no-descending-specificity */
-
-/* Ranking table within columns */
 .ranking > div {
   display: grid;
   grid-template-columns: 30px 140px repeat(7, 1fr);
@@ -48,27 +46,4 @@
 
 .ranking > div:nth-child(even) {
   background-color: var(--light-color);
-}
-
-/* Recent News and Clubs Ranking section */
-.columns.columns-2-cols > div {
-  gap: 40px;
-}
-
-.columns.columns-2-cols > div > div:first-child img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 3px;
-}
-
-.columns.columns-2-cols > div > div:first-child p em {
-  font-style: normal;
-  font-size: 10px;
-  color: var(--color-muted);
-}
-
-.columns.columns-2-cols > div > div:first-child p strong {
-  font-family: var(--heading-font-family);
-  font-size: 16px;
-  line-height: 20px;
 }

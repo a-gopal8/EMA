@@ -1,0 +1,110 @@
+.newsletter-container .newsletter-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.newsletter {
+  background-color: var(--light-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.newsletter .newsletter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px;
+  position: relative;
+  min-height: 400px;
+}
+
+.newsletter .newsletter-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.newsletter .newsletter-content h2 {
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #262626 0%, #b8c2ce 100%);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 32px;
+}
+
+.newsletter .newsletter-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  max-width: 400px;
+}
+
+.newsletter .newsletter-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.newsletter .newsletter-form {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 1px solid var(--dark-color);
+  overflow: hidden;
+}
+
+.newsletter .newsletter-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  background: transparent;
+  color: var(--dark-color);
+  outline: none;
+}
+
+.newsletter .newsletter-input::placeholder {
+  color: var(--color-muted);
+}
+
+.newsletter .newsletter-submit {
+  width: 50px;
+  border: none;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width >= 900px) {
+  .newsletter .newsletter-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 80px 48px;
+  }
+
+  .newsletter .newsletter-content {
+    text-align: left;
+    max-width: 60%;
+  }
+
+  .newsletter .newsletter-content h2 {
+    font-size: 60px;
+  }
+
+  .newsletter .newsletter-form {
+    margin: 0;
+  }
+}

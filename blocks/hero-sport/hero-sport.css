@@ -1,0 +1,191 @@
+.hero-sport-container .hero-sport-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-sport {
+  position: relative;
+  background-color: var(--background-color);
+  padding: 0;
+}
+
+.hero-sport .hero-sport-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.hero-sport .hero-sport-main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.hero-sport .hero-sport-heading {
+  font-family: var(--heading-font-family);
+  font-size: 48px;
+  line-height: 1;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #262626 0%, #b8c2ce 100%);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.hero-sport .hero-sport-image {
+  display: block;
+}
+
+.hero-sport .hero-sport-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-sport .hero-sport-description {
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.hero-sport .hero-sport-cta {
+  margin: 16px 0 0;
+}
+
+.hero-sport .hero-sport-cta .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 32px;
+  border-radius: 6px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+}
+
+.hero-sport .hero-sport-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-sport .hero-sport-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 16px;
+  border-radius: 3px;
+  background-color: var(--light-color);
+  color: var(--color-accent);
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 20px;
+  width: fit-content;
+}
+
+.hero-sport .hero-sport-sidebar-card {
+  display: flex;
+  gap: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.hero-sport .hero-sport-sidebar-image {
+  flex-shrink: 0;
+  width: 120px;
+  height: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.hero-sport .hero-sport-sidebar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-sport .hero-sport-sidebar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.hero-sport .hero-sport-sidebar-text p:first-child {
+  font-family: var(--body-font-family);
+  font-size: 10px;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.hero-sport .hero-sport-sidebar-text p:last-child {
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .hero-sport .hero-sport-wrapper {
+    flex-direction: row;
+    padding: 40px 32px;
+  }
+
+  .hero-sport .hero-sport-main {
+    flex: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .hero-sport .hero-sport-heading {
+    font-size: 80px;
+    line-height: 75px;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  .hero-sport .hero-sport-image {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+    justify-self: center;
+    z-index: 1;
+  }
+
+  .hero-sport .hero-sport-description {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    z-index: 2;
+    max-width: 400px;
+  }
+
+  .hero-sport .hero-sport-cta {
+    grid-column: 1;
+    grid-row: 4;
+    z-index: 2;
+  }
+
+  .hero-sport .hero-sport-sidebar {
+    flex: 1;
+    max-width: 320px;
+  }
+
+  .hero-sport .hero-sport-sidebar-image {
+    width: 160px;
+    height: 100px;
+  }
+}
